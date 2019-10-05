@@ -1,2 +1,4 @@
-# BPS-BaseDevelopment_1_2019
-Репозиторий курса "Основы разработки" (1 занятие в неделю) от BestPracticeSchool
+
+![Иллюстрация к проекту](https://github.com/BestPracticeSchool/BaseProgramming/blob/master/Pictures/vkCover.png)
+
+[bestpracs.ru](https://bestpracs.ru/) - **School of Programming "Best Practice School"**
