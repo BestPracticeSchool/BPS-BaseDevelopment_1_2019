@@ -1,28 +1,33 @@
+'''
+Условие: напишите программу, которая для данного текста подсчитывает частоты всех символов в нем. 
+Регистр не важен. То есть символы 'А' и 'а' - эквивалентны.
+Входные данные: произвольный текст.
+Выходные данные: таблица с частотами символов. 
+Таблица должна быть отсортирована по убыванию частот, в случае равных частот — в алфавитном порядке. 
+Если в тексте нет алфавитных символов - выводим перенос строки.
+'''
 import string
-ALLbukovi = set()
-bukovi = dict()
-
-s = input().lower()
-
-for c in s:
-    if c in string.punctuation or c == ' ':
+ALLBUKOVI = set()
+BUKOVI = dict()
+S = input().lower()
+for C in S:
+    if C in string.punctuation or C == ' ':
         pass
-    elif not(c in ALLbukovi):
-        ALLbukovi.add(c)
-        bukovi.update({c:1})
+    elif not C in ALLBUKOVI:
+        ALLBUKOVI.add(C)
+        BUKOVI.update({C:1})
     else:
-        bukovi[c] += 1
-
-while bukovi:
-    mas = list()
-    val = max(bukovi.values())
-    for key in bukovi.keys():
-        if bukovi[key] == val:
-            mas.append(key)
-    
-    for key in mas: 
-        bukovi.pop(key)
-
-    mas.sort()
-    for i in mas:
-        print(str(i) + ': ' + str(val))
+        BUKOVI[C] += 1
+while BUKOVI:
+    MAS = list()
+    VAL = max(BUKOVI.values())
+    for KEY in BUKOVI.keys():
+        if BUKOVI[KEY] == VAL:
+            MAS.append(KEY)
+    for KEY in MAS:
+        BUKOVI.pop(KEY)
+    MAS.sort()
+    for I in MAS:
+        print(str(I) + ': ' + str(VAL))
+    if ALLBUKOVI == {}:
+        print("\n")
